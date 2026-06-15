@@ -1,0 +1,243 @@
+{% extends 'dummy.html' %}
+{% load static %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HireHub</title>
+
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+<section class="bgimg">
+    <img src="{% static 'images/bgimg.png' %}">
+
+    <div class="hero-content">
+        <h1>Find Your Dream Job</h1>
+        <p>Explore thousands of opportunities with HireHub</p>
+
+        <!-- FIXED LINE -->
+        <a class="butt1" href="{% url 'jobs' %}">Apply Job</a>
+
+        <a href="{% url 'jobs' %}" class="butt2">Post Jobs</a>
+    </div>
+</section>
+
+<section class="path-section">
+    <div class="container">
+        <div class="path-hero">
+            <h1>YOUR <span>CAREER PATH</span> TO SUCCESS</h1>
+            <p>Follow our proven roadmap to accelerate your career growth and unlock new opportunities</p>
+        </div>
+
+        <div class="path">
+            <div>
+                <h2 class="first-content">Skills Development</h2>
+                <p>Learn industry-relevant skills through expert-led courses</p>
+            </div>
+            <div class="icon">
+                <i class="bi bi-mortarboard"></i>
+            </div>
+        </div>
+
+        <div class="path reverse">
+            <div>
+                <h2 class="first-content">Mock Interviews</h2>
+                <p>Practice with real interviewers and get detailed feedback</p>
+            </div>
+            <div class="icon">
+                <i class="bi bi-camera-video"></i>
+            </div>
+        </div>
+
+        <div class="path">
+            <div>
+                <h2 class="first-content">Certification</h2>
+                <p>Earn recognized certifications to boost your resume</p>
+            </div>
+            <div class="icon">
+                <i class="bi bi-award"></i>
+            </div>
+        </div>
+
+        <div class="path reverse">
+            <div>
+                <h2 class="first-content">Job Placement</h2>
+                <p>Apply for relevant opportunities and land your dream job</p>
+            </div>
+            <div class="icon">
+                <i class="bi bi-people"></i>
+            </div>
+        </div>
+
+        <div class="path">
+            <div>
+                <h2 class="first-content">Networking</h2>
+                <p>Connect with professionals and expand your network</p>
+            </div>
+            <div class="icon">
+                <i class="bi bi-briefcase"></i>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="stats-section">
+    <div class="container">
+        <div class="row text-center">
+
+            <div class="col-md-4">
+                <h2 class="counter" data-target="10000" data-suffix="+">0</h2>
+                <p>Active Users</p>
+            </div>
+
+            <div class="col-md-4">
+                <h2 class="counter" data-target="2000" data-suffix="+">0</h2>
+                <p>Placements</p>
+            </div>
+
+            <div class="col-md-4">
+                <h2 class="counter" data-target="95" data-suffix="%">0</h2>
+                <p>Success Rate</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="resume-section">
+
+    <div class="resume-hero">
+        <h1>UPLOAD YOUR <span>RESUME</span></h1>
+        <p>Keep your resume ready for opportunities and apply for jobs with ease</p>
+    </div>
+
+    <div class="resume-container">
+
+        <div class="resume-left">
+            <form method="POST" enctype="multipart/form-data" class="resume-upload">
+                {% csrf_token %}
+                <input type="file" name="resume" accept=".pdf" required>
+                <button type="submit">Upload Resume</button>
+            </form>
+        </div>
+
+        <div class="resume-right">
+
+            <h3 class="resume-title">Uploaded Resumes</h3>
+
+            {% if resumes %}
+
+            <div class="resume-grid">
+
+                {% for resume in resumes %}
+                <div class="resume-card">
+
+                    <div class="pdf-viewer" data-url="{{ resume.resume.url }}"></div>
+
+                    {% if resume.ats_score is not None %}
+                    <p class="ats-score">ATS Score: <strong>{{ resume.ats_score }}%</strong></p>
+                    {% else %}
+                    <p class="ats-score">ATS Score: <strong>Not available</strong></p>
+                    {% endif %}
+
+                    <form method="POST" action="{% url 'delete_resume' resume.id %}">
+                        {% csrf_token %}
+                        <button class="delete-btn">Delete</button>
+                    </form>
+
+                </div>
+                {% endfor %}
+
+            </div>
+
+            {% else %}
+                <p class="empty-text">No resumes uploaded yet.</p>
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="testimonial-section">
+    <div class="container">
+        <h1>What Our Users Say</h1>
+        <p class="sub-text">
+            Real success stories from professionals who accelerated their careers with our platform
+        </p>
+
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <div class="testimonial-card">
+                        <p class="quote">"HireHub helped me improve my skills and land better opportunities."</p>
+                        <h4>Sarah Johnson</h4>
+                        <span>Software Engineer</span>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="testimonial-card">
+                        <p class="quote">"The mock interviews helped me gain confidence and crack my dream job."</p>
+                        <h4>Michael Chen</h4>
+                        <span>Data Analyst</span>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="testimonial-card">
+                        <p class="quote">"Certification programs boosted my resume and career opportunities."</p>
+                        <h4>Emma Wilson</h4>
+                        <span>UI/UX Designer</span>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="testimonial-card">
+                        <p class="quote">"Networking through HireHub helped my career growth."</p>
+                        <h4>David Brown</h4>
+                        <span>Marketing Specialist</span>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="testimonial-card">
+                        <p class="quote">"Got placed within 2 months thanks to HireHub."</p>
+                        <h4>Priya Sharma</h4>
+                        <span>Business Analyst</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+<script src="{% static 'js/index.js' %}"></script>
+
+{% endblock %}

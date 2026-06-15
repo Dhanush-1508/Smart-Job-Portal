@@ -1,0 +1,237 @@
+{% load static %}
+
+.latest-title{
+    font-size:60px;
+    font-weight:800;
+    /*text-align:center;*/
+    margin-bottom:15px;
+}
+
+.latest-jobs{
+    padding-top:100px;
+    padding-bottom:80px;
+    background:linear-gradient(135deg,#f5f7fa,#e4ecfb);
+}
+
+.latest-subtitle p{
+    text-align: center;
+    font-size: 18px;
+    margin: 15px 0px 30px 0px;
+}
+.latest-title{
+    font-size:60px;
+    font-weight:800;
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.latest-subtitle{
+    text-align:center;
+    font-size:18px;
+    color:#666;
+    margin:15px auto 40px;
+    max-width:700px;
+    line-height:1.6;
+}
+
+.latest-title span{
+    background: linear-gradient(90deg, #26627c, #49a670, #80782c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.job-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+    align-items:start;
+}
+
+.job-box{
+    background: rgb(255 255 255 / 0.45);
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.job-box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 30px rgb(27 189 54 / 0.9);
+}
+
+.job-box h4{
+    color:#000000;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.job-box p{
+    margin-bottom:10px;
+    color:black;
+}
+
+.job-box i{
+    color:#1bbd36;
+    margin-right:8px;
+}
+
+.job-badge{
+    display:inline-block;
+    padding:6px 15px;
+    background:#1bbd36;
+    color:#fff;
+    border-radius:20px;
+    font-size:13px;
+    margin-top:10px;
+}
+.job-btn{
+    display:block;
+    width:45%;
+    text-align:center;
+    margin:20px auto 0;
+    padding:10px;
+    background:#fce204;
+    color:#000;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:600;
+    border:none;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.job-btn:hover{
+    background:#1bbd36;
+    color:#fff;
+}
+
+/* =========================
+   ADD JOB CARD
+========================= */
+
+.add-job-box{
+    border-radius:18px;
+    padding:20px;
+    /*border-top:4px solid #1bbd36;*/
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    background: rgb(255 255 255 / 0.45);
+}
+
+.add-job-box form{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+
+}
+
+.add-job-box h4{
+    text-align:center;
+    color:#000000;
+    margin-bottom:10px;
+}
+
+.add-job-box input,
+.add-job-box select,
+.add-job-box textarea{
+    width:100%;
+    padding:10px 12px;
+    border:1px solid rgb(0 0 0 / 0.2);
+    border-radius:6px;
+    font-size:14px;
+    box-sizing:border-box;
+    background: rgb(255 255 255 / 0.45);
+}
+
+.add-job-box input:focus,
+.add-job-box select:focus{
+    outline:none;
+    border-color:#1bbd36;
+}
+
+.search-box {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.search-box input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+.search-box input:focus {
+    border-color: #1bbd36;
+}
+.search-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.search-box button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #1bbd36;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.search-box button:hover {
+    background: #169c2d;
+}
+.clear-btn {
+    padding: 12px 25px;
+    background: #fce204;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+.clear-btn:hover {
+    color: white;
+    background: #5a6268;
+}
+
+/* moblie view*/
+
+@media (min-width:320px) and (max-width:480px) {
+
+    .latest-title {
+        font-size: 45px;
+    }
+
+    .latest-jobs p {
+        font-size: 14px;
+    }
+ .search-box {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    .search-input {
+        width: 100%;
+        min-width: unset;
+    }
+    .search-actions {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+    }
+    .search-btn,
+    .clear-btn {
+        flex: 1;
+        width: 50%;
+    }
+    .latest-jobs {
+        padding-top: 80px !important;
+    }
+}

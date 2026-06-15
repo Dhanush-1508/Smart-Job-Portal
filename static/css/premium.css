@@ -1,0 +1,209 @@
+                               /* Payment */
+
+.pricing-hero span{
+    font-size: 48px!important;
+    font-weight: 800;
+    background: linear-gradient(90deg, #2A7B9B, #57C785, #EDDD53);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.pricing-hero h3{
+    font-size: 48px!important;
+    font-weight: 800;
+}
+.payment{
+    padding-top: 70px;
+}
+.payment .pbox{
+    border: inherit;
+    padding: 30px;
+    margin: 15px;
+    border-radius: 10px;
+    background-color: rgba(0, 140, 255, 0.041);
+    flex: 1;
+    min-width: 300px;
+}
+.payment .pbox:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 30px rgb(27 189 54 / 0.9);
+    background-color: rgba(0, 140, 255, 0.041);
+}
+.payment h5{
+    font-weight: 450;
+}
+.payment p{
+    font-size: 14px;
+}
+.payment h4{
+    color: #1bbd36;
+    font-size: 40px;
+}
+.payment .butt{
+    border: 1px solid black;
+    text-decoration: none;
+    padding: 10px 40px;
+    border-radius: 5px;
+    /* background-color: #1bbd36; */
+    color: black;
+}
+.payment .butt:hover{
+    background-color: #1bbd36;
+    transition: all 0.3s;
+    border: inherit;
+    color: white;
+}
+.payment .butt1{
+    background-color: #1bbd36;
+    border: inherit;
+    color: #fff;
+}
+.payment .small{
+    padding: 8px;
+}
+.payment li {
+    padding: 0;
+    list-style: none;
+    color:#1bbd36;
+    text-align: left;
+    line-height: 30px;
+}
+.payment ul .wrong span {
+    text-decoration: line-through;
+}
+.payment span{
+    color: #555;
+    font-size: 16px;
+}
+.payment .wrong{
+    color: #d31c1c;
+}
+.payment ul .wrong{
+    font-size: 18px;
+    color: #fd0c0c;
+}
+.payment .lite{
+    color: #999;
+}
+.price-box{
+    margin: 20px 0px 20px 0px;
+  text-align: center;
+}
+
+/* =========================
+   PRICING HERO
+========================= */
+
+.pricing-hero,
+.section-header {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.pricing-hero h2,
+.section-header h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+.pricing-hero h2 span,
+.section-header h2 span {
+    background: linear-gradient(90deg, #2A7B9B, #57C785, #EDDD53);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.pricing-hero p,
+.section-header p {
+    font-size: 17px;
+    color: #666;
+    max-width: 580px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* =========================
+   FAQ SECTION
+========================= */
+
+.pricing-faq {
+    padding: 70px 0 80px;
+    background: #fff;
+}
+.faq-item {
+    background: #f8fafc;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.3s ease;
+}
+.faq-item:hover {
+    box-shadow: 0 6px 20px rgba(27, 189, 54, 0.1);
+}
+.faq-item[open] {
+    box-shadow: 0 6px 20px rgba(27, 189, 54, 0.12);
+    background: #fff;
+}
+.faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 22px;
+    background: transparent;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: #111;
+    text-align: left;
+    cursor: pointer;
+    list-style: none;
+}
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+.faq-question::marker {
+    display: none;
+    content: "";
+}
+.faq-question i {
+    color: #1bbd36;
+    font-size: 14px;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+.faq-item[open] .faq-question i {
+    transform: rotate(180deg);
+}
+.faq-answer p {
+    padding: 0 22px 18px;
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.65;
+}
+
+
+
+@media (min-width:320px) and (max-width:480px) {
+
+.payment .pbox {
+    margin: 45px;
+}
+    .pricing-faq{
+        padding: 50px 0 60px;
+    }
+.pricing-hero p, .section-header p {
+    font-size: 14px;
+}
+.pricing-hero h3 {
+    font-size: 40px ;
+}
+}

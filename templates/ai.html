@@ -1,0 +1,55 @@
+{% extends 'dummy.html' %}
+{% load static %}
+
+{% block title %}
+Job
+{% endblock %}
+
+{% block content %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HireHub</title>
+    <link rel="stylesheet" href="{% static 'css/ai.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<section class="ai-hero">
+
+    <div class="hero-content">
+
+        <h1>Drop Your Skills & Find Your Dream Job</h1>
+
+        <p>
+            Tell us your skills and get AI recommendations.
+        </p>
+
+        <form method="POST" class="ai-form">
+            {% csrf_token %}
+
+            <input type="text" name="question" placeholder="Example: Python, Django..." required>
+
+            <button type="submit">Ask AI</button>
+        </form>
+
+        {% if jobs %}
+        <div class="ai-response">
+            <h3>AI Recommendation</h3>
+            <ul class="job-list">
+                {% for job in jobs %}
+                    <li>{{ job }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+    </div>
+</section>
+
+{% endblock %}

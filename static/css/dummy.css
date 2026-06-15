@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Roboto Slab", serif;
+
+}
+
+:root{
+    --primary-color:#1bbd36;
+}
+.navbar {
+    position: sticky;
+    background: white;
+}
+body{
+    /*padding-top: 70px;*/
+}
+.icons i{
+    margin: 10px;
+    font-size: 18px;
+    margin-right: 5px;
+}
+.collapse{
+    font-size: 14px;
+}
+.navbar-nav{
+margin-left: 280px;
+}
+.icons .bi-twitter-x{
+    margin-left: 20px;
+}
+.navbar .navbar-brand{
+    font-size: 20px;
+}
+.navbar-nav .nav-link:hover {
+    color: #1bbd36 !important;
+}
+.dropdown-menu .dropdown-item:hover{
+    color: #1bbd36;
+}
+.icons i:hover{
+    color: #1bbd36;
+}
+.navbar .icons i{
+    font-size: 18px !important;
+}
+.navbar-brand{
+    margin-left:115px;
+}
+.carousel-inner .d-block{
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    margin-top: 50px;
+}
+section{
+    margin-top: 0px;
+}
+
+
+/*footer*/
+
+
+/* FOOTER BASE */
+.fbottom {
+  background-color: #111;
+  color: white;
+}
+
+/* Headings */
+.fbottom h5 {
+  color: #1bbd36;
+  margin-bottom: 15px;
+}
+
+/* Paragraph */
+.fbottom p {
+  color: white;
+  font-size: 14px;
+}
+
+/* Links */
+.fbottom a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+    font-size:14px
+}
+
+.fbottom a:hover {
+  color: #1bbd36;
+}
+
+/* Contact links */
+.fbottom .contact a {
+  color: #1bbd36;
+}
+
+/* Subscribe */
+.stext {
+  border-radius: 2px;
+}
+
+.stext:focus {
+  border-color: #1bbd36;
+  box-shadow: 0 0 0 0.15rem rgba(27,189,54,0.25);
+}
+
+.sbutt {
+  background-color: #1bbd36 !important ;
+    width: 100px;
+  color: white;
+  border: none;
+}
+.logolink {
+    display: flex;
+    align-items: center;
+    justify-content: center;   /* center everything in one line */
+    gap: 20px;
+    padding: 15px 20px;
+    background-color:#111111db;
+    color: white;
+    white-space: nowrap;      /* prevents line break */
+
+}
+
+/* Text */
+.logolink p {
+    margin: 0;
+    font-size: 14px;
+    color: white;
+}
+.logolink p span{
+    color: #1bbd36;
+}
+/* Social icons */
+.logolink .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+
+/* Icon style */
+.logolink .social-icons a {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(90deg,rgba(32, 9, 91, 1) 0%,
+     rgba(95, 65, 171, 1) 58%, rgba(162, 135, 231, 1) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.logolink .social-icons ion-icon {
+    font-size: 18px;
+    color: #bbb;
+}
+
+/* Hover */
+.logolink .social-icons a:hover {
+    background: #fff;
+}
+
+.logolink .social-icons a:hover ion-icon {
+    color: #111;
+}
+.menusymbol{
+    display: none;
+}
+
+.logolink .social-icons a {
+    width: 25px;
+    height: 25px;
+}
+.logolink{
+ gap: 0px
+}
+.logolink p{
+    font-size: 12px;
+}
+
+
+@media(max-width:768px) {
+
+
+    .logolink .social-icons a {
+        width: 20px;
+        height: 20px;
+    }
+    .logolink .social-icons ion-icon {
+        font-size: 14px;
+        padding-left: 2px;
+    }
+    .text-dark {
+        color: #212529 !important;
+        margin-left: 190px;
+    }
+}

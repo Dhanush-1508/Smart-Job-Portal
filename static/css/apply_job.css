@@ -1,0 +1,163 @@
+.apply-section {
+    padding: 120px 0 80px;
+    background: #f8fafc;
+}
+
+.job-layout {
+    display: grid;
+    grid-template-columns: 1fr 580px;
+    gap: 30px;
+    align-items: start;
+}
+
+.job-description {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 0;
+}
+
+.job-description h2 {
+    margin-bottom: 15px;
+}
+
+.job-description pre {
+    white-space: pre-wrap;
+    font-family: inherit;
+    margin-bottom: 0;
+}
+
+.apply-card {
+    width: 100%;
+    max-width: 580px;
+    margin: 0;
+    background: #fff;
+    padding: 28px 32px;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.apply-card h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: rgb(27 189 54 / 0.71);
+}
+
+.places {
+    text-align: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.apply-card p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+/* Form grid — side by side to reduce height */
+.apply-card form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+}
+
+.apply-card form .form-group {
+    margin-bottom: 12px;
+}
+
+/* Full width fields: name, email, linkedin, cover letter, resume */
+.apply-card form .form-group:nth-of-type(1),
+.apply-card form .form-group:nth-of-type(2),
+.apply-card form .form-group:nth-of-type(5),
+.apply-card form .form-group:nth-of-type(6),
+.apply-card form .form-group:nth-of-type(7) {
+    grid-column: 1 / -1;
+}
+
+/* Phone + Location side by side (3rd and 4th form-group) */
+
+.apply-card form .apply-btn {
+    grid-column: 1 / -1;
+    margin-top: 4px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    min-height: 70px;
+    max-height: 100px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #1bbd36;
+}
+
+.apply-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #1bbd36;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.apply-btn:hover {
+    background: #169c2d;
+}
+
+/* Mobile: stack one by one */
+@media (max-width: 991px) {
+    .job-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .apply-card {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 40px;
+    }
+
+    .apply-card h1 {
+        font-size: 42px;
+    }
+
+    .apply-card form {
+        grid-template-columns: 1fr;
+    }
+
+    .apply-card form .form-group {
+        grid-column: 1 / -1;
+    }
+
+    .job-description {
+        margin-bottom: 30px;
+    }
+    .apply-section {
+        padding: 40px 0 80px;
+    }
+}

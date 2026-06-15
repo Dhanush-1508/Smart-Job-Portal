@@ -1,0 +1,348 @@
+
+.stats-section{
+    background: linear-gradient(0deg, rgb(27 189 54 / 0.9) 0%, rgb(252 226 4 / 0) 100%);
+    padding: 180px;
+}
+
+.counter{
+  padding-top: 30px;
+    font-size:55px;
+    font-weight:bold;
+    color: #138827;
+}
+   /*TOP COMPANIES*/
+
+.clients {
+  padding: 60px 0;
+}
+
+.clients h2 {
+  font-weight: 700;
+  font-size:60px ;
+}
+
+.clients .line {
+  width: 50px;
+  height: 3px;
+  background: #1bbd36;
+  margin: 10px auto 20px;
+}
+
+.client-box {
+  border: 1px solid #eaeaea;
+  padding: 30px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  /*overflow: hidden;*/
+}
+.client-box img {
+  max-width: 100%;
+  max-height: 100px;
+}
+.client-box{
+      transition: 0.4s;
+}
+.client-box:hover  {
+  transform: scale(1.08);
+  opacity: 1.0;
+}
+
+.clients p{
+    margin: 20px 0px 60px 0px;
+}
+
+.clients span {
+  background: linear-gradient(90deg, #2A7B9B, #57C785, #EDDD53);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+   /*SHARED SECTION HEADER*/
+
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 14px;
+    letter-spacing: -0.3px;
+}
+
+.section-header h2 span {
+    background: linear-gradient(90deg, #2A7B9B, #57C785, #EDDD53);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-header p {
+    font-size: 17px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.how-it-works {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.step-card {
+    background: #f8fafc;
+    border-radius: 18px;
+    padding: 32px 26px;
+    text-align: center;
+    height: 100%;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+    transform:translateY(-8px);
+    box-shadow:0 12px 30px rgb(27 189 54 / 0.9);
+}
+
+.step-number {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(27, 189, 54, 0.35);
+    letter-spacing: 1px;
+}
+
+.step-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 20px;
+    background: #1bbd36;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(27, 189, 54, 0.3);
+}
+
+.step-icon i {
+    font-size: 28px;
+    color: #fff;
+}
+
+.step-card h4 {
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.step-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.65;
+    margin: 0;
+}
+
+
+/*   WHY HIREHUB*/
+
+
+.why-hirehub {
+    padding: 80px 0 90px;
+    background: #f8fafc;
+}
+
+.feature-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 28px 22px;
+    height: 100%;
+    text-align: center;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform:translateY(-8px);
+    box-shadow:0 12px 30px rgb(27 189 54 / 0.9);
+}
+
+.feature-card i {
+    font-size: 32px;
+    color: #1bbd36;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.feature-card h4 {
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+   /*CTA BOX*/
+
+
+.cta-box {
+    margin-top: 55px;
+    background:linear-gradient(135deg,#f5f7fa,#e4ecfb);
+    border-radius: 20px;
+    padding: 45px 30px;
+    text-align: center;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.07);
+}
+
+.cta-box h3 {
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.cta-box > p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 28px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-btn.primary {
+    background: #fce204;
+    color: #000;
+}
+
+.cta-btn.primary:hover {
+    background: #1bbd36;
+    color: #fff;
+}
+
+.cta-btn.primary i {
+    transition: transform 0.2s ease;
+}
+
+.cta-btn.primary:hover i {
+    transform: translateX(4px);
+}
+
+.cta-btn.secondary {
+    background: transparent;
+    color: #111;
+    border: 2px solid #1bbd36;
+}
+
+.cta-btn.secondary:hover {
+    background: #1bbd36;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* moblie view*/
+
+@media (min-width:320px) and (max-width:480px) {
+
+  /*CLIENT*/
+  .clients h2 {
+    font-size: 36px;
+  }
+
+  .counter {
+    font-size: 45px;
+  }
+
+  .stats-section {
+    padding: 130px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .how-it-works,
+    .why-hirehub {
+        padding: 60px 0;
+    }
+
+    .section-header {
+        margin-bottom: 35px;
+    }
+
+    .cta-box {
+        padding: 35px 20px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+.section-header h2 {
+    font-size: 40px;
+}
+}

@@ -1,0 +1,168 @@
+{% extends 'dummy.html' %}
+{% load static %}
+
+{% block title %}
+Job
+{% endblock %}
+
+{% block content %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HireHub</title>
+    <link rel="stylesheet" href="{% static 'css/premium.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<section class="payment">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="pricing-hero">
+                <h3>Choose Your <span>Plan</span></h3>
+                <p>Free to explore. Upgrade anytime for more hiring and career tools.</p>
+            </div>
+            <!-- FREE PLAN -->
+            <div class="pbox my-5">
+                <h3>Free Plan</h3>
+                <p>Start exploring jobs on HireHub with basic features.</p>
+
+                <h4><sup>₹</sup>0<span>/month</span></h4>
+
+                <div class="price-box">
+                    <a href="#" class="butt">Start Free</a>
+                    <p class="small">No credit card required</p>
+                </div>
+
+                <ul>
+                    <li><i class="bi bi-check"></i> <span>Browse job listings</span></li>
+                    <li><i class="bi bi-check"></i> <span>Apply to limited jobs</span></li>
+                    <li><i class="bi bi-check"></i> <span>Upload resume</span></li>
+
+                    <li class="wrong"><i class="bi bi-x"></i> <span class="lite">AI job matching</span></li>
+                    <li class="wrong"><i class="bi bi-x"></i> <span class="lite">Priority support</span></li>
+                </ul>
+            </div>
+
+            <!-- BUSINESS PLAN -->
+            <div class="pbox my-5">
+                <h3>Business Plan</h3>
+                <p>Best for recruiters and companies hiring on HireHub.</p>
+
+                <h4><sup>₹</sup>199<span>/month</span></h4>
+
+                <div class="price-box">
+                    <a href="#" class="butt butt1">Get Started</a>
+                    <p class="small">No credit card required</p>
+                </div>
+
+                <ul>
+                    <li><i class="bi bi-check"></i> <span>Post unlimited jobs</span></li>
+                    <li><i class="bi bi-check"></i> <span>Access candidate database</span></li>
+                    <li><i class="bi bi-check"></i> <span>Priority job listing</span></li>
+
+                    <li class="wrong"><i class="bi bi-x"></i> <span class="lite">AI resume analysis</span></li>
+                    <li class="wrong"><i class="bi bi-x"></i> <span class="lite">Smart job matching</span></li>
+                </ul>
+            </div>
+
+            <!-- DEVELOPER PLAN -->
+            <div class="pbox my-5">
+                <h3>Developer Plan</h3>
+                <p>Advanced AI-powered hiring tools for HireHub.</p>
+
+                <h4><sup>₹</sup>999<span>/year</span></h4>
+
+                <div class="price-box">
+                    <a href="#" class="butt">Start Now</a>
+                    <p class="small">No credit card required</p>
+                </div>
+
+                <ul>
+                    <li><i class="bi bi-check"></i> <span>AI job recommendations</span></li>
+                    <li><i class="bi bi-check"></i> <span>Resume scoring system</span></li>
+                    <li><i class="bi bi-check"></i> <span>Smart matching engine</span></li>
+
+                    <li class="wrong"><i class="bi bi-x"></i> <span class="lite">Manual job filtering</span></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="pricing-faq">
+    <div class="container">
+
+        <div class="section-header">
+            <h2>Frequently Asked <span>Questions</span></h2>
+            <p>Everything you need to know about HireHub plans and billing.</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        Can I switch plans later?
+                        <i class="bi bi-chevron-down"></i>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Yes. You can upgrade or downgrade anytime. Changes apply from your next billing cycle.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        Is the Free plan really free?
+                        <i class="bi bi-chevron-down"></i>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Absolutely. Browse jobs, apply to listings, and upload your resume — no credit card needed.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        Who should choose the Business plan?
+                        <i class="bi bi-chevron-down"></i>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Recruiters and companies who want to post jobs, reach candidates, and get priority visibility on HireHub.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        What does the Developer plan include?
+                        <i class="bi bi-chevron-down"></i>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>AI job recommendations, resume scoring, and smart matching — built for power users and hiring teams.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        Do you offer refunds?
+                        <i class="bi bi-chevron-down"></i>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Yes. If you're not satisfied within 7 days of purchase, contact support for a full refund.</p>
+                    </div>
+                </details>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+{% endblock %}

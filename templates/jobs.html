@@ -1,0 +1,124 @@
+{% extends 'dummy.html' %}
+{% load static %}
+
+{% block title %}
+Job
+{% endblock %}
+
+{% block content %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HireHub</title>
+    <link rel="stylesheet" href="{% static 'css/jobs.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+
+
+<section class="latest-jobs">
+    <div class="container">
+        <h2 class="latest-title">Find <span> Your Dream </span> Job</h2>
+<p class="latest-subtitle">
+    Discover thousands of opportunities from trusted companies and take the next step in your career.
+</p>
+<form method="GET" class="search-box">
+
+    <input type="text" name="search" class="search-input"
+           placeholder="Search jobs..." value="{{ request.GET.search }}">
+
+    <div class="search-actions">
+        <button type="submit" class="search-btn">Search</button>
+        <a href="{% url 'jobs' %}" class="clear-btn">Show All</a>
+    </div>
+
+</form>
+
+        <div class="job-grid">
+
+            <!-- Existing Jobs -->
+            {% for job in jobs %}
+            <div class="job-box">
+                <h4>{{ job.title }}</h4>
+
+                <p>
+                    <i class="bi bi-building"></i>
+                    {{ job.company }}
+                </p>
+
+                <p>
+                    <i class="bi bi-geo-alt"></i>
+                    {{ job.location }}
+                </p>
+
+                <p>
+                    <i class="bi bi-cash-stack"></i>
+                    {{ job.salary }}
+                </p>
+
+                <span class="job-badge">
+                    {{ job.job_type }}
+                </span>
+
+                <a href="{% url 'apply_job' job.id %}" class="job-btn">
+    Apply Now
+</a>
+            </div>
+            {% endfor %}
+
+            <!-- Add Job Card -->
+            <div class="job-box add-job-box">
+
+                <form method="POST">
+                    {% csrf_token %}
+
+                    <h4>Add New Job</h4>
+
+                    <input type="text" name="title" placeholder="Job Title" required>
+                    <input type="text" name="company" placeholder="Company" required>
+                    <input type="text" name="location" placeholder="Location" required>
+                    <input type="text" name="salary" placeholder="Salary" required>
+
+                    <div class="form-group">
+                        <textarea name="description" rows="6"
+                         placeholder="Description"></textarea>
+                    </div>
+
+                    <select name="job_type" required>
+                        <option value="">Select Job Type</option>
+                        <option value="Full Time">Full Time</option>
+                        <option value="Part Time">Part Time</option>
+                        <option value="Remote">Remote</option>
+                        <option value="Hybrid">Hybrid</option>
+                    </select>
+
+                    <button type="submit" class="job-btn">
+                        Post Job
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<script>
+function openForm(){
+    document.getElementById("jobForm").style.display = "flex";
+}
+
+function closeForm(){
+    document.getElementById("jobForm").style.display = "none";
+}
+</script>
+
+{% endblock %}

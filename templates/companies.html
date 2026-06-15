@@ -1,0 +1,244 @@
+{% extends 'dummy.html' %}
+{% load static %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HireHub</title>
+    <link rel="stylesheet" href="{% static 'css/companies.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+<section class="stats-section">
+    <div class="container">
+        <div class="row text-center">
+
+            <div class="col-md-4">
+                <h2 class="counter" data-target="500" data-suffix="+">0</h2>
+                <p>Compaines</p>
+            </div>
+
+            <div class="col-md-4">
+                <h2 class="counter" data-target="5000" data-suffix="+">0</h2>
+                <p>Hired</p>
+            </div>
+
+            <div class="col-md-4">
+                <h2 class="counter" data-target="95" data-suffix="%">0</h2>
+                <p>Success Rate</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="clients">
+    <div class="container">
+
+        <div class="row text-center">
+            <div class="col-12">
+                <h2>Connect With <span>Top Companies</span></h2>
+                <p>Explore opportunities from leading employers.</p>
+            </div>
+        </div>
+
+        <div class="row clients-grid">
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="client-box">
+                    <img src="{% static 'images/google.png' %}" alt="Google">
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="client-box">
+                    <img src="{% static 'images/microsoft.png' %}" alt="Microsoft">
+                </div>
+            </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="client-box">
+                    <img src="{% static 'images/accenture.jpeg' %}" alt="accenture">
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="client-box">
+                    <img src="{% static 'images/amazon.png' %}" alt="amazon">
+                </div>
+            </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="client-box">
+                    <img src="{% static 'images/capgemini.jpeg' %}" alt="capgemini">
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="client-box">
+                    <img src="{% static 'images/ibm.png' %}" alt="ibm">
+                </div>
+            </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="client-box">
+                    <img src="{% static 'images/infosys.png' %}" alt="infosys">
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="client-box">
+                    <img src="{% static 'images/oracle.jpeg' %}" alt="oracle">
+                </div>
+            </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="client-box">
+                    <img src="{% static 'images/tcs.png' %}" alt="tcs">
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="client-box">
+                    <img src="{% static 'images/tech.jpeg' %}" alt="tech">
+                </div>
+            </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="client-box">
+                    <img src="{% static 'images/zoho.png' %}" alt="zoho">
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="client-box">
+                    <img src="{% static 'images/wipro.png' %}" alt="wipro">
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<section class="how-it-works">
+    <div class="container">
+
+        <div class="section-header">
+            <h2>How It <span>Works</span></h2>
+            <p>Find your next role in three simple steps — fast, easy, and hassle-free.</p>
+        </div>
+
+        <div class="row g-4 steps-row">
+
+            <div class="col-md-4">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <i class="bi bi-search"></i>
+                    </div>
+                    <h4>Browse Jobs</h4>
+                    <p>Explore openings from top companies across locations, roles, and salary ranges.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <i class="bi bi-file-earmark-person"></i>
+                    </div>
+                    <h4>Apply Online</h4>
+                    <p>Submit your details and resume in minutes — no complicated forms or long waits.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <i class="bi bi-briefcase-fill"></i>
+                    </div>
+                    <h4>Get Hired</h4>
+                    <p>Connect with recruiters, track applications, and land your dream job faster.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="why-hirehub">
+    <div class="container">
+
+        <div class="section-header">
+            <h2>Why Choose <span>HireHub</span></h2>
+            <p>Everything you need to grow your career — trusted by job seekers and employers alike.</p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-card">
+                    <i class="bi bi-shield-check"></i>
+                    <h4>Trusted Companies</h4>
+                    <p>Partner with verified employers from IT, finance, and leading global brands.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-card">
+                    <i class="bi bi-lightning-charge"></i>
+                    <h4>Quick Apply</h4>
+                    <p>One-click applications with resume upload — apply to multiple jobs in no time.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-card">
+                    <i class="bi bi-people"></i>
+                    <h4>For Everyone</h4>
+                    <p>Freshers, experienced professionals, and remote workers — opportunities for all.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-card">
+                    <i class="bi bi-graph-up-arrow"></i>
+                    <h4>Career Growth</h4>
+                    <p>Access roles that match your skills and help you take the next step in your career.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="cta-box">
+            <h3>Ready to start your journey?</h3>
+            <p>Browse open positions or post a job and find the right talent today.</p>
+            <div class="cta-buttons">
+                <a href="{% url 'jobs' %}" class="cta-btn primary">
+                    Browse Jobs <i class="bi bi-arrow-right"></i>
+                </a>
+                <a href="{% url 'jobs' %}" class="cta-btn secondary">
+                    Post a Job
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<script src="{% static 'js/index.js' %}"></script>
+
+{% endblock %}

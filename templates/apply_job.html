@@ -1,0 +1,122 @@
+{% extends 'dummy.html' %}
+{% load static %}
+
+{% block title %}
+Apply Job
+{% endblock %}
+
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HireHub</title>
+
+    <link rel="stylesheet" href="{% static 'css/apply_job.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<section class="apply-section">
+    <div class="container">
+
+        <div class="job-layout">
+
+            <!-- LEFT SIDE -->
+            <div class="job-description">
+
+                <h2>{{ job.title }}</h2>
+
+                <p><strong>Company:</strong> {{ job.company }}</p>
+                <p><strong>Location:</strong> {{ job.location }}</p>
+                <p><strong>Salary:</strong> {{ job.salary }}</p>
+                <p><strong>Job Type:</strong> {{ job.job_type }}</p>
+
+                <hr>
+
+                <h3>Job Description</h3>
+
+                <pre>{{ job.description }}</pre>
+
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="apply-card">
+
+                <h1>Apply Now</h1>
+
+                <h4 class="places">
+                    {{ job.company }} , {{ job.location }}
+                </h4>
+
+                <p>
+                    Fill in your details and upload your resume.
+                </p>
+
+{% if submitted %}
+<div class="alert alert-success">
+    Your application has been submitted successfully! <br>
+    {% if email_sent %}
+    A confirmation email was sent to your Gmail inbox.
+    {% else %}
+    Application saved, but the confirmation email could not be sent.
+    {% endif %}
+</div>
+{% endif %}
+
+                <form method="POST" enctype="multipart/form-data">
+
+                    {% csrf_token %}
+
+                    <input type="hidden" name="job_id" value="{{ job.id }}">
+
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Current Location *</label>
+                        <input type="text" name="location" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>LinkedIn Profile</label>
+                        <input type="url" name="linkedin">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cover Letter</label>
+                        <textarea name="cover_letter" rows="5"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Upload Resume *</label>
+                        <input type="file" name="resume" required>
+                    </div>
+
+                    <button type="submit" class="apply-btn">
+                        Submit Application
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
